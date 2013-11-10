@@ -22,9 +22,9 @@ public final class Main {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 	
 	// N.m (Newton Meter)
-	static final int TORQUE = 350;
+	static final Integer TORQUE = 350;
 	// HP (Horse Power)
-	static final int HORSE_POWER = 200;
+	static final Integer HORSE_POWER = 200;
 	// RPM (Rotation Per Minute)
 	static final Range<Integer> RPM_RANGE = Range.closed(1000, 6500);
 

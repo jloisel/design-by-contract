@@ -32,6 +32,11 @@ public final class Main {
 		throw new IllegalAccessError();
 	}
 	
+	/**
+	 * Run this main method to see the application in action.
+	 * 
+	 * @param args command line arguments
+	 */
 	public static void main(final String[] args) {
 		final Injector injector = Guice.createInjector(
 			new ImmutableCarModule(), 

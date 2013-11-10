@@ -19,9 +19,4 @@ final class AtmosphericEngine implements Engine {
 	public PowerBand powerBand() {
 		return powerBand;
 	}
-	
-	@Override
-	public String toString() {
-		return "Engine with PowerBand=["+powerBand+"]";
-	}
 }

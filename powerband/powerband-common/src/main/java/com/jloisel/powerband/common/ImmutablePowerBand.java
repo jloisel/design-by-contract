@@ -37,9 +37,4 @@ final class ImmutablePowerBand implements PowerBand {
 	public Torque torque() {
 		return torque;
 	}
-
-	@Override
-	public String toString() {
-		return "PowerBand Torque=[" + torque + "], HorsePower=[" + horsePower + "]";
-	}
 }

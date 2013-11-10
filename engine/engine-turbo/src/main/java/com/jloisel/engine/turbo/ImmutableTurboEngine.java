@@ -24,9 +24,4 @@ final class ImmutableTurboEngine implements TurboEngine {
 	public void setPressure(final int pressure) {
 		powerBand.setPressure(pressure);
 	}
-
-	@Override
-	public String toString() {
-		return "TurboEngine["+powerBand+"]";
-	}
 }

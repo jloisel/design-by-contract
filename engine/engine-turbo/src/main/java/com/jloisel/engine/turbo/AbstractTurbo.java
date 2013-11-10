@@ -24,9 +24,4 @@ abstract class AbstractTurbo extends AbstractPowerCurve implements Turbo {
 	public void setPressure(final int pressure) {
 		this.pressure = pressure;
 	}
-	
-	@Override
-	public String toString() {
-		return "TurboPowerCurve=[pressure='" + pressure + "'PSI, [" + curve + "]]";
-	}
 }

@@ -19,9 +19,4 @@ final class ImmutableCar implements Car {
 	public PowerBand powerBand() {
 		return engine.powerBand();
 	}
-	
-	@Override
-	public String toString() {
-		return "Car Engine=[" + engine + "]";
-	}
 }

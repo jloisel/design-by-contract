@@ -20,9 +20,4 @@ final class ConstantTorque extends AbstractPowerCurve implements Torque {
 	protected Integer whenWithinRange(final Integer input) {
 		return torque;
 	}
-
-	@Override
-	public String toString() {
-		return "Constant Torque '" + torque + "' N.m within " + range() + " RPM";
-	}
 }

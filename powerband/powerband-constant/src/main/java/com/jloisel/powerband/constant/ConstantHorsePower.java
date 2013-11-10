@@ -20,9 +20,4 @@ final class ConstantHorsePower extends AbstractPowerCurve implements HorsePower 
 	protected Integer whenWithinRange(final Integer input) {
 		return horsePower;
 	}
-	
-	@Override
-	public String toString() {
-		return "Constant '" + horsePower + "' H.P. within " + range() + " RPM";
-	}
 }

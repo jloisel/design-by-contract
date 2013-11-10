@@ -25,7 +25,8 @@ public final class ConstantPowerBandModule extends PrivateModule {
 		
 		requireBinding(Key.get(Integer.class, HorsePowerValue.class));
 		requireBinding(Key.get(Integer.class, TorqueValue.class));
-		requireBinding(Key.get(new TypeLiteral<Range<Integer>>() {}));
+		requireBinding(Key.get(new TypeLiteral<Range<Integer>>() {
+		}));
 		
 		expose(HorsePower.class);
 		expose(Torque.class);

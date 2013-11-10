@@ -37,9 +37,4 @@ class TurboPowerBand implements PowerBand, Turbo {
 		horsePower.setPressure(pressure);
 		torque.setPressure(pressure);
 	}
-
-	@Override
-	public String toString() {
-		return "TurboPowerBand=[HP="+horsePower + ", torque=" + torque + "]";
-	}
 }

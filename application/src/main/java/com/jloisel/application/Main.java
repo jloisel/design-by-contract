@@ -1,5 +1,8 @@
 package com.jloisel.application;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.collect.Range;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -16,6 +19,8 @@ import com.jloisel.powerband.constant.ConstantPowerBandModule;
  *
  */
 public final class Main {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+	
 	// N.m (Newton Meter)
 	static final int TORQUE = 350;
 	// HP (Horse Power)
@@ -39,8 +44,8 @@ public final class Main {
 		final PowerBand powerBand = car.powerBand();
 
 		final int rpm = 2000;
-		System.out.println("At " + rpm + " RPM, Car outputs:");
-		System.out.println(powerBand.horsePower().apply(rpm)+ " hp");
-		System.out.println(powerBand.torque().apply(rpm) + " N.m");
+		LOGGER.info("At " + rpm + " RPM, Car outputs:");
+		LOGGER.info(powerBand.horsePower().apply(rpm)+ " hp");
+		LOGGER.info(powerBand.torque().apply(rpm) + " N.m");
 	}
 }

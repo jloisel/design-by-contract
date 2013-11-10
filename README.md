@@ -1,8 +1,24 @@
-design-by-contract
+Design by Contract Java Sample application
 ==================
 
 This application shows how to create a modular Java application using Maven, in respect to "Design by Contract".
 
 To run the application:
-1. Import Maven project,
-2. Run Main class in application module.
+- Import Maven project,
+- Run Main class in application module.
+
+It's an implementation of a simple model:
+- Car: represents an automotive Car,
+- Engine: an internal combustion engine,
+- PowerBand: HorsePower and Torque curves over an RPM range.
+
+Dependencies:
+- Guice,
+- Guava,
+- JUnit,
+- Mockito.
+
+Development technics:
+- Design By Contract,
+- Test Driven Development,
+- Dependency Injection.

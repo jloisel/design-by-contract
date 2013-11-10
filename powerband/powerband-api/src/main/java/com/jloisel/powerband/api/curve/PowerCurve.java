@@ -24,5 +24,5 @@ public interface PowerCurve extends Function<Integer, Integer> {
 	 * @throws IllegalArgumentException when input RPM outside {@link #range()}
 	 */
 	@Override
-	public Integer apply(Integer input);
+	Integer apply(Integer input);
 }

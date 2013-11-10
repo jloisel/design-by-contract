@@ -23,7 +23,11 @@ public final class Main {
 	// RPM (Rotation Per Minute)
 	static final Range<Integer> RPM_RANGE = Range.closed(1000, 6500);
 
-	public static void main(String[] args) {
+	private Main() {
+		throw new IllegalAccessError();
+	}
+	
+	public static void main(final String[] args) {
 		final Injector injector = Guice.createInjector(
 			new ImmutableCarModule(), 
 			new TurboEngineModule(),

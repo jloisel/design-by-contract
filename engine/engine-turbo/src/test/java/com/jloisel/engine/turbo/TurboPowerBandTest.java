@@ -1,5 +1,8 @@
 package com.jloisel.engine.turbo;
 
+import static org.mockito.Mockito.verify;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -22,8 +25,16 @@ public class TurboPowerBandTest extends AbstractPowerBandTest {
 				.setDefault(TurboTorque.class, torque);
 	}
 	
+	@Test
+	public void shouldSetPressureOnBothHorsePowerPAndTorque() {
+		final TurboPowerBand powerBand = newInstance();
+		powerBand.setPressure(10);
+		verify(horsePower).setPressure(10);
+		verify(torque).setPressure(10);
+	}
+	
 	@Override
-	protected PowerBand newInstance() {
+	protected TurboPowerBand newInstance() {
 		return new TurboPowerBand(horsePower, torque);
 	}
 

@@ -8,5 +8,4 @@ public class CarbonTest extends AbstractMaterialTest {
 	protected Material newInstance() {
 		return new Carbon();
 	}
-
 }

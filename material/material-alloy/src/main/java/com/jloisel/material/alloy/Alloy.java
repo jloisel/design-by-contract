@@ -19,6 +19,6 @@ final class Alloy implements Material {
 	
 	@Override
 	public String toString() {
-		return "Alloy";
+		return getClass().getSimpleName();
 	}
 }

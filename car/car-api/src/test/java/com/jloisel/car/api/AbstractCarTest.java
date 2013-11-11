@@ -3,6 +3,7 @@ package com.jloisel.car.api;
 import static com.google.common.testing.NullPointerTester.Visibility.PACKAGE;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
@@ -32,6 +33,12 @@ public abstract class AbstractCarTest {
 	public void shouldReturnSamePowerBand() {
 		final Car car = newInstance();
 		assertEquals(car.powerBand(), car.powerBand());
+	}
+	
+	@Test
+	public void shouldReturnSameBody() {
+		final Car car = newInstance();
+		assertSame(car.body(), car.body());
 	}
 	
 	@Test

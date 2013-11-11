@@ -21,7 +21,7 @@ public class ImmutableWheelTest extends AbstractWheelTest {
 	
 	@Test
 	public void shouldOverrideToString() {
-		assertNotNull(newInstance(FOURTEEN, mock(Material.class)));
+		assertNotNull(newInstance(FOURTEEN, mock(Material.class)).toString());
 	}
 	
 	@Override

@@ -7,6 +7,7 @@ import com.google.common.collect.Iterables;
 import com.google.common.collect.Range;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.jloisel.body.immutable.ImmutableBodyModule;
 import com.jloisel.car.api.Car;
 import com.jloisel.car.immutable.ImmutableCarModule;
 import com.jloisel.engine.immutable.AtmosphericEngineModule;
@@ -48,6 +49,7 @@ public final class Main {
 			new AtmosphericEngineModule(),
 			new ImmutableWheelModule(),
 			new AlloyMaterialModule(),
+			new ImmutableBodyModule(),
 			new WiringModule()
 		);
 

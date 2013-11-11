@@ -10,6 +10,10 @@
 	
 	<dependencies>
 		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.jloisel.body</groupId>
 			<artifactId>body-api</artifactId>
 			<version>${project.version}</version>

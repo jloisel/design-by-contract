@@ -27,7 +27,7 @@ abstract class AbstractTurboPowerCurve extends AbstractPowerCurve implements Tur
 	}
 
 	@Override
-	protected synchronized Integer whenWithinRange(final Integer input) {
+	protected synchronized final Integer whenWithinRange(final Integer input) {
 		return pressure * curve.apply(input);
 	}
 

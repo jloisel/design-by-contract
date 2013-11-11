@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 import com.google.inject.BindingAnnotation;
 
 /**
- * Binds constant Horse Power value.
+ * Binds Horse Power value.
  * 
  * @author Jerome
  *

@@ -6,7 +6,7 @@ package com.jloisel.engine.turbo;
  * @author Jerome
  *
  */
-interface Turbo {
+public interface Turbo {
 	/**
 	 * Sets Turbo max pressure in PSI, atmospheric pressure 
 	 * not included.

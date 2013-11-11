@@ -1,22 +1,25 @@
 package com.jloisel.engine.immutable;
 
-import com.google.inject.PrivateModule;
+import com.google.inject.AbstractModule;
 import com.jloisel.engine.api.Engine;
+import com.jloisel.engine.common.ImmutableEngineModule;
 import com.jloisel.powerband.api.PowerBand;
+import com.jloisel.powerband.linear.LinearPowerBandModule;
 
 /**
- * Provides an immutable {@link Engine}.
+ * Provides an atmospheric {@link Engine}: {@link PowerBand} is linear 
+ * to RPM.
+ * 
+ * See {@link LinearPowerBandModule} for required bindings.
  * 
  * @author Jerome
  *
  */
-public final class AtmosphericEngineModule extends PrivateModule {
-
+public final class AtmosphericEngineModule extends AbstractModule {
 	@Override
 	protected void configure() {
-		bind(Engine.class).to(AtmosphericEngine.class);
-		requireBinding(PowerBand.class);
-		expose(Engine.class);
+		install(new ImmutableEngineModule());
+		install(new LinearPowerBandModule());
 	}
 
 }

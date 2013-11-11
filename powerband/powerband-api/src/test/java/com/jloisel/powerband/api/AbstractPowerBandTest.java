@@ -17,7 +17,7 @@ public abstract class AbstractPowerBandTest {
 
 	@Test
 	public void shouldPassNullPointerTester() {
-		newNullPointerTester().testConstructors(clazz(), PACKAGE);
+		newNullPointerTester().testConstructors(newInstance().getClass(), PACKAGE);
 	}
 
 	protected NullPointerTester newNullPointerTester() {
@@ -40,9 +40,4 @@ public abstract class AbstractPowerBandTest {
 	 * @return new {@link PowerBand} instance
 	 */
 	protected abstract PowerBand newInstance();
-	
-	/**
-	 * @return tested {@link PowerBand} implementation class.
-	 */
-	protected abstract Class<? extends PowerBand> clazz();
 }

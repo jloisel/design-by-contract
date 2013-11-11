@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 import com.google.inject.BindingAnnotation;
 
 /**
- * Binds Constant torque value.
+ * Binds Torque value.
  * 
  * @author Jerome
  *

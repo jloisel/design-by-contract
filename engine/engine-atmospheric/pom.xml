@@ -11,15 +11,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.jloisel.engine</groupId>
-			<artifactId>engine-api</artifactId>
+			<artifactId>engine-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.jloisel.engine</groupId>
-			<artifactId>engine-api</artifactId>
+			<groupId>com.jloisel.powerband</groupId>
+			<artifactId>powerband-linear</artifactId>
 			<version>${project.version}</version>
-			<type>test-jar</type>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

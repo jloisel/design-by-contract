@@ -9,7 +9,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.google.common.testing.NullPointerTester;
 import com.jloisel.powerband.api.AbstractPowerBandTest;
-import com.jloisel.powerband.api.PowerBand;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TurboPowerBandTest extends AbstractPowerBandTest {
@@ -37,10 +36,4 @@ public class TurboPowerBandTest extends AbstractPowerBandTest {
 	protected TurboPowerBand newInstance() {
 		return new TurboPowerBand(horsePower, torque);
 	}
-
-	@Override
-	protected Class<? extends PowerBand> clazz() {
-		return TurboPowerBand.class;
-	}
-
 }

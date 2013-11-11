@@ -14,5 +14,6 @@
 		<module>powerband-api</module>
 		<module>powerband-constant</module>
 		<module>powerband-common</module>
+		<module>powerband-linear</module>
 	</modules>
 </project>

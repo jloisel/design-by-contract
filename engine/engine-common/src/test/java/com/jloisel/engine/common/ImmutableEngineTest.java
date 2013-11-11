@@ -1,4 +1,4 @@
-package com.jloisel.engine.immutable;
+package com.jloisel.engine.common;
 import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
@@ -8,17 +8,17 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.jloisel.engine.api.AbstractEngineTest;
 import com.jloisel.engine.api.Engine;
-import com.jloisel.engine.immutable.AtmosphericEngine;
+import com.jloisel.engine.common.ImmutableEngine;
 import com.jloisel.powerband.api.PowerBand;
 
 /**
- * Tests {@link AtmosphericEngine}.
+ * Tests {@link ImmutableEngine}.
  * 
  * @author Jerome
  *
  */
 @RunWith(MockitoJUnitRunner.class)
-public class AtmosphericEngineTest extends AbstractEngineTest {
+public class ImmutableEngineTest extends AbstractEngineTest {
 	@Mock
 	private PowerBand powerBand;
 	
@@ -29,7 +29,7 @@ public class AtmosphericEngineTest extends AbstractEngineTest {
 	
 	@Override
 	protected Engine newEngine() {
-		return new AtmosphericEngine(powerBand);
+		return new ImmutableEngine(powerBand);
 	}
 	
 }

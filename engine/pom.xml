@@ -14,5 +14,7 @@
 		<module>engine-api</module>
 		<module>engine-atmospheric</module>
 		<module>engine-turbo</module>
+		<module>engine-electric</module>
+		<module>engine-common</module>
 	</modules>
 </project>

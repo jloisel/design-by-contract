@@ -11,6 +11,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.jloisel.engine</groupId>
+			<artifactId>engine-atmospheric</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jloisel.engine</groupId>
 			<artifactId>engine-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>

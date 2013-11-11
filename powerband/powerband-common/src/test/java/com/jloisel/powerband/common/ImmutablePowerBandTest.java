@@ -39,9 +39,4 @@ public class ImmutablePowerBandTest extends AbstractPowerBandTest {
 	protected PowerBand newInstance() {
 		return new ImmutablePowerBand(horsePower, torque);
 	}
-	
-	@Override
-	protected Class<? extends PowerBand> clazz() {
-		return ImmutablePowerBand.class;
-	}
 }

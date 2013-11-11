@@ -14,5 +14,15 @@
 			<artifactId>powerband-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.jloisel.wheel</groupId>
+			<artifactId>wheel-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jloisel.body</groupId>
+			<artifactId>body-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

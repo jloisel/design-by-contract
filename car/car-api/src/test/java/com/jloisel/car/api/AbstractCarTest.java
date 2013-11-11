@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
+import com.google.common.collect.Iterables;
 import com.google.common.testing.NullPointerTester;
 
 /**
@@ -31,6 +32,12 @@ public abstract class AbstractCarTest {
 	public void shouldReturnSamePowerBand() {
 		final Car car = newInstance();
 		assertEquals(car.powerBand(), car.powerBand());
+	}
+	
+	@Test
+	public void shouldFourWheels() {
+		final Car car = newInstance();
+		assertEquals(4, Iterables.size(car.wheels()));
 	}
 	
 	/**

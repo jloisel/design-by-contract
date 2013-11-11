@@ -20,8 +20,13 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.jloisel.powerband</groupId>
-			<artifactId>powerband-constant</artifactId>
+			<groupId>com.jloisel.wheel</groupId>
+			<artifactId>wheel-immutable</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jloisel.material</groupId>
+			<artifactId>material-alloy</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>

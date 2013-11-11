@@ -7,6 +7,7 @@ import com.jloisel.material.api.Material;
 import com.jloisel.wheel.api.Wheel;
 import com.jloisel.wheel.api.WheelSize;
 
+
 /**
  * Immutable {@link Wheel}.
  * 

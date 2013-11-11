@@ -7,7 +7,9 @@ import com.jloisel.material.api.Material;
 @Singleton
 final class Carbon implements Material {
 	@Inject
-	Carbon() { }
+	Carbon() {
+		
+	}
 	
 	@Override
 	public String toString() {

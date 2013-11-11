@@ -13,7 +13,9 @@ import com.jloisel.material.api.Material;
 @Singleton
 final class Alloy implements Material {
 	@Inject
-	Alloy() { }
+	Alloy() {
+		
+	}
 	
 	@Override
 	public String toString() {

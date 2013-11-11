@@ -5,6 +5,13 @@ import com.jloisel.material.api.Material;
 import com.jloisel.wheel.api.Wheel;
 import com.jloisel.wheel.api.WheelSize;
 
+/**
+ * <p>Provides {@link Wheel}.
+ * <p>Requires {@link WheelSize} and {@link Material}.
+ * 
+ * @author Jerome
+ *
+ */
 public final class ImmutableWheelModule extends PrivateModule {
 	@Override
 	protected void configure() {

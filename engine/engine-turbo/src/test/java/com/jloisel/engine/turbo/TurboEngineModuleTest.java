@@ -50,7 +50,7 @@ public class TurboEngineModuleTest {
 		final Engine engine = injector.getInstance(Engine.class);
 		assertNotNull(engine);
 		
-		final int rpm = MIN_RPM + new Random(System.currentTimeMillis()).nextInt(MAX_RPM);
+		final int rpm = MIN_RPM + new Random(System.currentTimeMillis()).nextInt(MAX_RPM - MIN_RPM);
 		final PowerBand powerBand = engine.powerBand();
 		assertEquals(valueOf(rpm * LINEAR_COEFFICIENT * TURBO_PRESSURE), powerBand.horsePower().apply(rpm));
 		assertEquals(valueOf(rpm * LINEAR_COEFFICIENT * TURBO_PRESSURE), powerBand.torque().apply(rpm));

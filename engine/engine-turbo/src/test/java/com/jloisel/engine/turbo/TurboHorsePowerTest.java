@@ -12,7 +12,7 @@ public class TurboHorsePowerTest extends AbstractTurboTest<HorsePower> {
 	}
 	
 	@Override
-	protected AbstractTurbo newInstance(final HorsePower curve) {
+	protected AbstractTurboPowerCurve newInstance(final HorsePower curve) {
 		return new TurboHorsePower(curve);
 	}
 

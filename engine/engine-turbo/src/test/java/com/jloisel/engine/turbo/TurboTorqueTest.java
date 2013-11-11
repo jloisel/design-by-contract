@@ -12,7 +12,7 @@ public class TurboTorqueTest extends AbstractTurboTest<Torque> {
 	}
 	
 	@Override
-	protected AbstractTurbo newInstance(final Torque curve) {
+	protected AbstractTurboPowerCurve newInstance(final Torque curve) {
 		return new TurboTorque(curve);
 	}
 

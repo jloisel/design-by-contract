@@ -1,9 +1,15 @@
 package com.jloisel.engine.turbo;
 
+/**
+ * Implementing classes have adjustable turbo pressure.
+ * 
+ * @author Jerome
+ *
+ */
 interface Turbo {
 	/**
 	 * Sets Turbo max pressure in PSI, atmospheric pressure 
-	 * must not be included.
+	 * not included.
 	 * 
 	 * @param pressure turbo pressure in PSI
 	 */

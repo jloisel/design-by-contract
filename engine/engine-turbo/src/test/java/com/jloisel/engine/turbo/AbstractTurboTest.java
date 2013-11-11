@@ -14,7 +14,7 @@ import com.jloisel.powerband.api.curve.PowerCurve;
 import com.jloisel.powerband.common.curve.AbstractPowerCurveTest;
 
 /**
- * Tests {@link AbstractTurbo}.
+ * Tests {@link AbstractTurboPowerCurve}.
  * 
  * @author Jerome
  *
@@ -37,7 +37,7 @@ public abstract class AbstractTurboTest<T extends PowerCurve> extends AbstractPo
 	
 	@Test
 	public void shouldTakeIntoAccountTurboPressureInPowerCurve() {
-		final AbstractTurbo turbo = newInstance(curve);
+		final AbstractTurboPowerCurve turbo = newInstance(curve);
 		final Integer pressure = 2;
 		final Integer rpm = 1500;
 		turbo.setPressure(pressure);
@@ -47,17 +47,17 @@ public abstract class AbstractTurboTest<T extends PowerCurve> extends AbstractPo
 	}
 	
 	@Override
-	protected final AbstractTurbo newInstance() {
+	protected final AbstractTurboPowerCurve newInstance() {
 		return newInstance(curve);
 	}
 	
 	@Override
-	protected final AbstractTurbo newInstance(final Range<Integer> range) {
+	protected final AbstractTurboPowerCurve newInstance(final Range<Integer> range) {
 		when(curve.range()).thenReturn(range);
 		return newInstance(curve);
 	}
 	
 	protected abstract T mockCurve();
 	
-	protected abstract AbstractTurbo newInstance(final T curve);
+	protected abstract AbstractTurboPowerCurve newInstance(final T curve);
 }

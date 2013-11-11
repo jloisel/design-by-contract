@@ -3,7 +3,7 @@ package com.jloisel.engine.api;
 import com.jloisel.powerband.api.PowerBand;
 
 /**
- * Car engine with spcecific power characteristics.
+ * Car engine with specific power characteristics.
  * 
  * @author Jerome
  *

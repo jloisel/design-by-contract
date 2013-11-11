@@ -23,7 +23,7 @@ public class ConstantHorsePowerTest extends AbstractPowerCurveTest {
 	
 	@Override
 	protected AbstractPowerCurve newInstance() {
-		return new ConstantHorsePower(Range.singleton(1), 1);
+		return newInstance(Range.singleton(1));
 	}
 
 	@Override

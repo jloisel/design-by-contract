@@ -37,7 +37,7 @@ public class ImmutableTurboEngineTest extends AbstractEngineTest {
 	
 	@Override
 	protected TurboEngine newEngine() {
-		return new ImmutableTurboEngine(powerBand);
+		return new TurboEngine(powerBand);
 	}
 
 }

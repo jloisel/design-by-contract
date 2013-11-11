@@ -17,7 +17,7 @@ public final class TurboEngineModule extends PrivateModule {
 
 	@Override
 	protected void configure() {
-		bind(Engine.class).to(ImmutableTurboEngine.class);
+		bind(Engine.class).to(TurboEngine.class);
 		bind(TurboPowerBand.class);
 		bind(TurboHorsePower.class);
 		bind(TurboTorque.class);

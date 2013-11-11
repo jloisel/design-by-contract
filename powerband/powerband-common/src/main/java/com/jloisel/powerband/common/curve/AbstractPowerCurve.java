@@ -18,6 +18,10 @@ import com.jloisel.powerband.api.curve.Torque;
 public abstract class AbstractPowerCurve implements PowerCurve {
 	private final Range<Integer> range;
 
+	/**
+	 * @param range power curve applicable RPM range
+	 * @throws NullPointerException when {@code range} is {@code null}
+	 */
 	protected AbstractPowerCurve(final Range<Integer> range) {
 		super();
 		this.range = checkNotNull(range);
@@ -39,8 +43,8 @@ public abstract class AbstractPowerCurve implements PowerCurve {
 	}
 	
 	/**
-	 * Apply power curve on an input both not null and 
-	 * within range.
+	 * Apply power curve {@code Function} on a non-null 
+	 * input verified to be within {@link #range()}.
 	 * 
 	 * @param input
 	 * @return

@@ -10,11 +10,11 @@ import com.google.common.collect.Range;
  *
  */
 public interface PowerCurve extends Function<Integer, Integer> {
-
 	/**
-	 * Valid input RPM range.
+	 * Valid power curve RPM range.
+	 * Outside this range, {@link PowerCurve} cannot be applied.
 	 * 
-	 * @return power curve max input RPM
+	 * @return power curve input RPM range
 	 */
 	Range<Integer> range();
 	

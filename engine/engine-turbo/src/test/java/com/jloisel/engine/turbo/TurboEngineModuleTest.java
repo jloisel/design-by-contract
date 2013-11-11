@@ -42,6 +42,6 @@ public class TurboEngineModuleTest {
 	@Test
 	public void shouldBindCorrectly() {
 		final Injector injector = Guice.createInjector(new TurboEngineModule(), module);
-		assertEquals(ImmutableTurboEngine.class, injector.getInstance(Engine.class).getClass());
+		assertEquals(TurboEngine.class, injector.getInstance(Engine.class).getClass());
 	}
 }

@@ -1,14 +1,18 @@
 package com.jloisel.engine.turbo;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.inject.Inject;
+import com.google.inject.Key;
 import com.google.inject.PrivateModule;
+import com.google.inject.Provides;
 import com.jloisel.engine.api.Engine;
-import com.jloisel.powerband.api.PowerBand;
-import com.jloisel.powerband.api.curve.HorsePower;
-import com.jloisel.powerband.api.curve.Torque;
+import com.jloisel.engine.immutable.AtmosphericEngineModule;
+import com.jloisel.powerband.linear.LinearCoefficientValue;
 
 /**
- * Provides a {@link Turbo} {@link Engine}.
+ * <p>Provides a {@link Turbo} {@link Engine}.
+ * <p>Requires {@link TurboPressureValue}, {@link TurboLinearCoefficientValue} and 
+ * RPM {@code Range}.
  * 
  * @author Jerome
  *
@@ -19,18 +23,21 @@ public final class TurboEngineModule extends PrivateModule {
 
 	@Override
 	protected void configure() {
-		bind(TurboPowerBand.class);
-		bind(TurboHorsePower.class);
-		bind(TurboTorque.class);
-		bind(Engine.class).to(ImmutableTurboEngine.class);
-		bind(TurboEngine.class).to(ImmutableTurboEngine.class);
+		install(new AtmosphericEngineModule());
+		bind(Turbo.class);
 		
-		requireBinding(PowerBand.class);
-		requireBinding(HorsePower.class);
-		requireBinding(Torque.class);
+		requireBinding(Key.get(Integer.class, TurboPressureValue.class));
+		requireBinding(Key.get(Integer.class, TurboLinearCoefficientValue.class));
 		
 		expose(Engine.class);
-		expose(TurboEngine.class);
 	}
 
+	@Provides
+	@Inject
+	@LinearCoefficientValue
+	protected Integer providesLinearCoefficient(
+			final Turbo turbo, 
+			@TurboLinearCoefficientValue final Integer coefficient) {
+		return turbo.pressurize(coefficient);
+	}
 }

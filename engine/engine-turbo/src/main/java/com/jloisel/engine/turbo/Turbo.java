@@ -1,17 +1,32 @@
 package com.jloisel.engine.turbo;
 
+import static com.google.common.base.Preconditions.checkArgument;
+
+import com.google.inject.Inject;
+
 /**
- * Implementing classes have adjustable turbo pressure.
+ * Turbo increases linear coefficient to provide additionnal 
+ * horse power and torque.
+ * 
+ * Turbo pressure is configured by annotation.
  * 
  * @author Jerome
  *
  */
-public interface Turbo {
+final class Turbo {
+	private final int pressure;
+	
+	@Inject
+	Turbo(@TurboPressureValue final Integer pressure) {
+		super();
+		checkArgument(pressure > 0, "pressure must be a positive integer, invalid %s", pressure);
+		this.pressure = pressure;
+	}
+	
 	/**
-	 * Sets Turbo max pressure in PSI, atmospheric pressure 
-	 * not included.
-	 * 
-	 * @param pressure turbo pressure in PSI
+	 * @return linear coefficient augmented by turbo pressure
 	 */
-	void setPressure(int pressure);
+	Integer pressurize(final Integer coefficient) {
+		return pressure * coefficient;
+	}
 }

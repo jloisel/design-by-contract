@@ -8,6 +8,8 @@ import com.jloisel.powerband.api.PowerBand;
  * Provides an immutable {@link Engine}, with non-replaceable  
  * {@link PowerBand} instance.
  * 
+ * Requires {@link PowerBand}.
+ * 
  * @author Jerome
  *
  */

@@ -8,9 +8,8 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.jloisel.car.api.Car;
 import com.jloisel.car.immutable.ImmutableCarModule;
-import com.jloisel.engine.turbo.TurboEngineModule;
+import com.jloisel.engine.immutable.AtmosphericEngineModule;
 import com.jloisel.powerband.api.PowerBand;
-import com.jloisel.powerband.constant.ConstantPowerBandModule;
 
 /**
  * Executes the application.
@@ -27,6 +26,8 @@ public final class Main {
 	static final Integer HORSE_POWER = 200;
 	// RPM (Rotation Per Minute)
 	static final Range<Integer> RPM_RANGE = Range.closed(1000, 6500);
+	// Linear coefficient range
+	static final Integer LINEAR_COEFFICIENT = 1;
 
 	private Main() {
 		throw new IllegalAccessError();
@@ -40,8 +41,7 @@ public final class Main {
 	public static void main(final String[] args) {
 		final Injector injector = Guice.createInjector(
 			new ImmutableCarModule(), 
-			new TurboEngineModule(),
-			new ConstantPowerBandModule(), 
+			new AtmosphericEngineModule(),
 			new WiringModule()
 		);
 

@@ -25,6 +25,11 @@
 			<groupId>com.jloisel.material</groupId>
 			<artifactId>material-api</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jloisel.material</groupId>
+			<artifactId>material-api</artifactId>
+			<version>${project.version}</version>
 			<scope>test</scope>
 			<type>test-jar</type>
 		</dependency>

@@ -36,6 +36,12 @@ public abstract class AbstractCarTest {
 	}
 	
 	@Test
+	public void shouldReturnNonNullBody() {
+		final Car car = newInstance();
+		assertNotNull(car.body());
+	}
+	
+	@Test
 	public void shouldReturnSameBody() {
 		final Car car = newInstance();
 		assertSame(car.body(), car.body());

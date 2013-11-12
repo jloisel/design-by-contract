@@ -25,7 +25,12 @@ final class ImmutableCar implements Car {
 			final Wheel rearRight) {
 		this.body = checkNotNull(body);
 		this.engine = checkNotNull(engine);
-		this.wheels = ImmutableList.of(frontLeft, frontRight, rearLeft, rearRight);
+		this.wheels = ImmutableList.of(
+			frontLeft, 
+			frontRight, 
+			rearLeft, 
+			rearRight
+		);
 	}
 
 	@Override

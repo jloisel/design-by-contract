@@ -1,17 +1,13 @@
 package com.jloisel.car.immutable;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.google.common.collect.ImmutableList;
 import com.jloisel.body.api.Body;
 import com.jloisel.car.api.AbstractCarTest;
 import com.jloisel.car.api.Car;
@@ -37,16 +33,6 @@ public class ImmutableCarTest extends AbstractCarTest {
 	@Before
 	public void before() {
 		when(engine.powerBand()).thenReturn(mock(PowerBand.class));
-	}
-	
-	@Test
-	public void shouldReturnSamePowerBand() {
-		assertSame(engine.powerBand(), newInstance().powerBand());
-	}
-	
-	@Test
-	public void shouldReturnSameWheels() {
-		assertEquals(ImmutableList.of(wheel, wheel, wheel, wheel), newInstance().wheels());
 	}
 	
 	@Override

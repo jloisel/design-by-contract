@@ -3,6 +3,7 @@ package com.jloisel.engine.turbo;
 import static com.google.common.testing.NullPointerTester.Visibility.PACKAGE;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.util.Random;
 
@@ -20,7 +21,7 @@ public class TurboTest {
 
 	@Test(expected=IllegalArgumentException.class)
 	public void shouldThrowIllegalArgument() {
-		new Turbo(0);
+		assertNull(new Turbo(0));
 	}
 	
 	@Test

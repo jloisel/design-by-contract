@@ -27,7 +27,7 @@ final class WiringModule extends AbstractModule {
 
 	@Provides
 	@Singleton
-	Range<Integer> providesRPMRange() {
+	static Range<Integer> providesRPMRange() {
 		return RPM_RANGE;
 	}
 }

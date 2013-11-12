@@ -35,7 +35,7 @@ public final class TurboEngineModule extends PrivateModule {
 	@Provides
 	@Inject
 	@LinearCoefficientValue
-	protected Integer providesLinearCoefficient(
+	static Integer providesLinearCoefficient(
 			final Turbo turbo, 
 			@TurboLinearCoefficientValue final Integer coefficient) {
 		return turbo.pressurize(coefficient);

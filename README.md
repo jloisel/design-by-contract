@@ -10,7 +10,9 @@ To run the application:
 It's an implementation of a simple model:
 - Car: represents an automotive Car,
 - Engine: an internal combustion engine,
-- PowerBand: HorsePower and Torque curves over an RPM range.
+- PowerBand: HorsePower and Torque curves over an RPM range,
+- Wheel: just a wheel,
+- Body: car's body.
 
 Dependencies:
 - Guice,

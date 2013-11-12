@@ -1,9 +1,7 @@
 package com.jloisel.car.immutable;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -25,19 +23,18 @@ import com.jloisel.wheel.api.Wheel;
 public class ImmutableCarTest extends AbstractCarTest {
 	@Mock
 	private Engine engine;
-	@Mock
-	private Wheel wheel;
-	@Mock
-	private Body body;
-	
-	@Before
-	public void before() {
-		when(engine.powerBand()).thenReturn(mock(PowerBand.class));
-	}
-	
-	@Override
-	protected Car newInstance() {
-		return new ImmutableCar(body, engine, wheel, wheel, wheel, wheel);
-	}
 
+	@Override
+	protected Car newInstance(
+			final Body body,
+			final PowerBand powerBand, 
+			final Wheel frontLeft,
+			final Wheel frontRight, 
+			final Wheel rearLeft, 
+			final Wheel rearRight) {
+		when(engine.powerBand()).thenReturn(powerBand);
+		return new ImmutableCar(body, engine, frontLeft, frontRight, rearLeft, rearRight);
+	}
+	
+	
 }
